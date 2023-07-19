@@ -15,6 +15,18 @@ include 'hotels.php';
 
 <body>
 
+    <ul>
+        <?php foreach ($hotels as $hotel) : ?>
+            <li>
+                <h3><?php echo $hotel['name']; ?></h3>
+                <p><?php echo $hotel['description']; ?></p>
+                <p>Parking: <?php echo $hotel['parking'] ? 'True' : 'False'; ?></p>
+                <p>Vote: <?php echo $hotel['vote']; ?></p>
+                <p>Distance to Center: <?php echo $hotel['distance_to_center']; ?> km</p>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+
 </body>
 
 </html>
